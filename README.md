@@ -32,7 +32,7 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master :arrow_right: Clie
 
 10. Data Admin (Waktu Kontrak) : diisi waktu kontrak dalam hitungan bulan
 
-11. Data Lainnya (Alamat Pengiriman) : diisi jika alamat pengiriman pada invoice beda dengan alamat lengkap. untuk formatnya **Nama Kantor#Alamat Pengiriman**. 
+11. Data Lainnya (Alamat Pengiriman) : diisi jika alamat pengiriman pada invoice beda dengan alamat lengkap. untuk formatnya **Nama/Kantor Penerima#Alamat Pengiriman**. 
 
     
 
@@ -197,7 +197,25 @@ Ambil dari database **bayar_invoice , bayar_invoice_item , bk_bank**
 
 ### 2.4.3 Laporan Piutang Dagang
 
-Berisi Piutang Dagang per Client
+Berisi Piutang Dagang per Client yang diambil dari **saldo_client**.  Untuk Saldo Awal mulai 2021 diambil dari database **client** 
 
-Ambil dari database **saldo_client , **
+Data Laporan diambil dari database **saldo_client , bk_bank , client**
+
+### 2.4.4 Laporan Piutang Periode
+
+Berisi Detail Layanan Invoice dan Pembayaran Invocie yang diambil dari database **saldo_client**. Bisa filter berdasarkan periode tanggal invoice.
+
+### 2.4.5 Saldo Piutang Dagang
+
+Berisi informasi Saldo Akhir Client yang dapat ditentukan tanggal saldo akhirnya. Informasi juga dapat diexport ke Excel.
+
+Data Laporan diambil dari database **saldo_client dan client**
+
+### 2.4.6 Laporan Invoice Monthly
+
+Berisi informasi Invoice Bulan yang difilter per Bulan yang dapat dicetak PDF maupun export excel
+
+Data diambil dari database **invoice dan client **
+
+
 
