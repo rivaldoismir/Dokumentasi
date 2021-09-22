@@ -281,7 +281,7 @@ Database yang digunakan : **pcash_item**
 
 Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi baik penambahan / pengurangan item. maka dapat klik **Import to Petty Cash** sehingga program automatis menyalin item pada rekap yang dipilih ke **Input Petty Cash** selanjutnya Petty Cash yang dipilih dihapus (fungsinya agar **No BKK** dapat digunakan lagi).
 
-![](/img/PettyCash-Import.png)
+![](img/PettyCash-Import.png)
 
 
 
