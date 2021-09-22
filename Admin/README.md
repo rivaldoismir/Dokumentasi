@@ -1,6 +1,6 @@
 # 1 Data Client
 
-**Admin** bertanggung jawab mengelola data client baik menambahkan client baru maupun mengedit data client. Data Client berguna untuk pembuatan  [**Invoice**](#2-invoice)
+**Admin** bertanggung jawab mengelola data client baik menambahkan client baru maupun mengedit data client. Data Client berguna untuk pembuatan [**Invoice**](#2-invoice)
 
 **Database yang digunakan :** ***client** , **client_pkt***
 
@@ -15,12 +15,12 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master** :arrow_right: **
 3. Nama Client : diisi dengan nama client, untuk penggunaan simbol hanya diperbolehkan menggunakan [  **+ , . - ( )** ]
 
 4. Keterangan : 
-   1. Client Bulanan (Untuk client yang ditagih secara bulanan)
+   1. **Client Bulanan** (Untuk client yang ditagih secara bulanan)
    2. Client Onetime (Untuk client yang ditagih secara onetime)
    3. Client Titipan (Client Titipan berguna untuk Ticketting Helpdesk)
    4. BTS (Digunakan untuk Ticketting Helpdesk)
    
-5. Alamat Lengkap : diisi alamat client
+5. **Alamat Lengkap** : diisi alamat client
 
 6. Data PIC Client (Nama) : diisi nama PIC Client
 
@@ -32,15 +32,15 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master** :arrow_right: **
 
 10. Data Admin (Waktu Kontrak) : diisi waktu kontrak dalam hitungan bulan
 
-11. Data Lainnya (Alamat Pengiriman) : diisi jika alamat pengiriman pada invoice beda dengan alamat lengkap. untuk formatnya **NamaClient#Alamat Pengiriman**.
+11. Data Lainnya (Alamat Pengiriman) : diisi jika alamat pengiriman pada invoice berbeda dengan [alamat lengkap](#11-create-client). untuk format penuliasannya **NamaClient#Alamat Pengiriman**. Contohnya 
 
-    
+    > Alamat Pengiriman : Kantor Dinas Perhubungan Semarang#Jl. Mekar Sari No. 20
 
 ## 1.2 Edit Client
 
 Untuk mengedit **Data Client** bisa masuk ke **Data Master** :arrow_right: **Client** :pencil:**Edit Client**  . Data tambahan yang di edit yaitu :
 
-1.  No. Urut Invoice Auto : diisi angka lebih dari 0, sesuaikan dengan urutan Invoice Auto yang akan dicetak boleh, angka boleh sama.
+1.  No. Urut Invoice Auto : diisi angka lebih dari 0, sesuaikan dengan urutan Invoice Auto yang akan dicetak (angka boleh sama).
 
 2. Data Detail Layanan : Diinput untuk client dengan keterangan **Client Bulanan** . 
 
@@ -49,15 +49,15 @@ Untuk mengedit **Data Client** bisa masuk ke **Data Master** :arrow_right: **Cli
    1. Kategori Penjualan diisi sesuai ketentuan berikut ini :
       1.	BANDWIDTH : UNTUK TAGIHAN BANDWIDTH BULANAN
       2.	INSREG : HANYA UNTUK INSTALASI KLIEN BULANAN
-      3.	LAIN2 : 
-      A.	ANNUAL FEE (UNTUK KLIEN DU SMRG)
-      B.	JASA ONE TIME (PENARIKAN KABEL, SETTING AKSES POINT, SETTING RADIO, SETTING CCTV)
+      3.	LAIN2 :
+         1.	ANNUAL FEE (UNTUK KLIEN DU SMRG)
+         2.	JASA ONE TIME (PENARIKAN KABEL, SETTING AKSES POINT, SETTING RADIO, SETTING CCTV)
       4.	COLOCATION : COLOCATION SERVER / ANTENA (ADA KLIEN YANG MENITIPKAN PERANGKATNYA DI LAHAN DU)
       5.	DOMAIN/HOSTING : BIAYA DOMAIN (TAHUNAN), HOSTING (BULANAN)
       6.	IP : SEWA IP ADDRESS
       7.	INFRASTRUKTUR :
-      A.	 PEMBELIAN PERANGKAT SEKALIGUS DENGAN JASANYA YANG SIFATNYA ONE TIME, MISALNYA : ADA PEMBANGUNAN JARINGAN LOKAL LAN DI SEBUAH HOTEL, DATAUTAMA MENJUAL PERANGKAT SEKALIGUS JASA PENARIKAN KABELNYA.
-      B.	SEWA INFRASTRUKTUR (UNTUK KLIEN DU SMG-MSM)
+         1.	PEMBELIAN PERANGKAT SEKALIGUS DENGAN JASANYA YANG SIFATNYA ONE TIME, MISALNYA : ADA PEMBANGUNAN JARINGAN LOKAL LAN DI SEBUAH HOTEL, DATAUTAMA MENJUAL PERANGKAT SEKALIGUS JASA PENARIKAN KABELNYA.
+         2.	SEWA INFRASTRUKTUR (UNTUK KLIEN DU SMG-MSM)
       8.	PERANGKAT : JIKA HANYA MENJUAL PERANGKATNYA SAJA, TANPA JASA SETTING DLL.
    2. Deskripsi : input keterangan
    3. Tambahan Periode : Pilih **YA** , jika Deskripsi ada keterangan Periode Tanggal
