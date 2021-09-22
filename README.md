@@ -1,3 +1,3 @@
 # Dokumentasi
 Pilih dokumentasi mana yang ingin di baca
-  1. [Admin]()
+  1. [Admin](/Admin#readme)
