@@ -44,7 +44,7 @@ Untuk mengedit **Data Client** bisa masuk ke **Data Master** :arrow_right: **Cli
 
 2. Data Detail Layanan : Diinput untuk client dengan keterangan **Client Bulanan** . 
 
-   ![](https://github.com/rivaldoismir/Dokumentasi/blob/main/Admin/img/Client-Layanan.png) 
+   ![](img/Client-Layanan.png) 
 
    1. Kategori Penjualan diisi sesuai ketentuan berikut ini :
       1.	BANDWIDTH : UNTUK TAGIHAN BANDWIDTH BULANAN
@@ -287,4 +287,43 @@ Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika
 
 # 4 Pembeliaan
 
+hal dasar yang perlu diketahui: 
 
+##### Daftar Cabang  : 
+
+1. JKT : Jakarta
+2. SBY : Surabaya
+3. SMG : Semarang
+4. SLO : Solo
+5. TBN : Tuban
+
+##### Kategori Barang :
+
+1. Bandwidth : Kategori untuk barang berupa Layanan Internet, khusus badwidth satuan yang dipilih adalah **bundle**
+2. Akuntan & Konsultan : Kategori Supplier Jasa Akuntan & Konsultan
+3. Asuransi Cabang: Kategori Asuransi yang merupakan Amortisasi
+4. Sewa Cabang: Kategori Sewa yang merupakan Amortisasi
+5. HPPJ : Kategori HPP khusus Jasa
+6. LTAT : Kategori Listrik, Air & Telpon Bulanan
+7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS**
+8. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN**
+9. Barang langsung kode barangnnya : Kategori Barang yang akan dijual kembali ke Client
+
+## 4.1 Purchase Order
+
+Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Purchase Order & Pembeliaan :computer_mouse:   klik simbol :heavy_plus_sign:**
+
+Untuk membuat transaksi Purchase Order.
+
+## 4.2 Pembeliaan
+
+Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Purchase Order & Pembeliaan :computer_mouse: klik simbol :briefcase: **
+
+Untuk membuat transaksi Pembeliaan. Yang dipersiapkan untuk input pembeliaan:
+
+1. No Invoice : sesuaikan dengan no invoice pada tagihan, jika Tagihan Gabungan maka no invoice tambahkan kode cabangnya misal no invoice INV00900SMG untuk cabang Semarang. Jika memang tagihan tidak ada no invoice maka dikosongin saja.
+2. Tanggal Invoice : Tanggal Tagihan Invoice
+3. Meterai : Input meterai jika ada. Jika Invoice Gabungan maka meterai ditagihkan untuk Cabang Jakarta.
+4. PPN : Jika Tagihan tanpa PPN maka input 0
+5. Tambahkan Inputan Barang : 
+   1. Pilih Barang yang ditagih
