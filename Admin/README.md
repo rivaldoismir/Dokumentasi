@@ -1,6 +1,6 @@
 # 1 Data Client
 
-**Admin** bertanggung jawab mengelola data client baik menambahkan client baru maupun mengedit data client. Data Client berguna untuk pembuatan **Invoice**
+**Admin** bertanggung jawab mengelola data client baik menambahkan client baru maupun mengedit data client. Data Client berguna untuk pembuatan  [**Invoice**](#2-invoice)
 
 **Database yang digunakan :** ***client** , **client_pkt***
 
@@ -280,8 +280,6 @@ Database yang digunakan : **pcash_item**
 ### 3.4.3 Cetak Petty Cash
 
 Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
-
-[this link](#235-pembayaran-dengan-diskon-penjualan)
 
 
 
