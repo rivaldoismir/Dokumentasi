@@ -281,7 +281,7 @@ Database yang digunakan : **pcash_item**
 
 Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
 
-[this link](#343-cetak-petty-cash)
+[this link](#235-pembayaran-dengan-diskon-penjualan)
 
 
 
