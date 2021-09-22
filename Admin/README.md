@@ -255,13 +255,13 @@ Jurnal yang terbuat dari Petty Cash tersebut
 
 Seperti yang dijelaskan pada contoh kasus diatas pada **3 Petty Cash** . Input Hutang Dagang Pajak Petty Cash digunakan untuk potongan PPh. 
 
-Database yang digunakan : **glj, glj_item **
+Database yang digunakan : **glj, glj_item**
 
 Jenis jurnal yang digunakan : **PPH-PC**
 
 ## 3.4 Laporan Petty Cash
 
-Lokasi : **Laporan :arrow_right: Petty Cash **
+Lokasi : **Laporan :arrow_right: Petty Cash**
 
 Laporan yang terbentuk pada transakasi Petty Cash  :
 
@@ -281,7 +281,11 @@ Database yang digunakan : **pcash_item**
 
 Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
 
+[klik]: #343-cetak-petty-cash	"xxx"
+
 
 
 # 4 Pembeliaan
+
+
 
