@@ -281,7 +281,7 @@ Database yang digunakan : **pcash_item**
 
 Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
 
-[klik]: #343-cetak-petty-cash	"xxx"
+[this link](#343-cetak-petty-cash)
 
 
 
