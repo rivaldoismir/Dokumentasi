@@ -203,7 +203,7 @@ Data Laporan diambil dari database **saldo_client** dan **client**
 
 ### 2.4.6 Laporan Invoice Monthly
 
-Berisi informasi Invoice Bulan yang difilter per Bulan yang dapat dicetak PDF maupun export excel
+Berisi informasi Invoice Bulanan yang dapat dicetak **PDF** maupun export **Excel**
 
 Data diambil dari database **invoice** dan **client** 
 
@@ -214,7 +214,7 @@ Data diambil dari database **invoice** dan **client**
 Ketentuan Input Petty Cash :
 
 - Jika ada pembelian Perangkat yang merupakan Jenis Inventaris misal beli **Mikrotik powerline PL 7411** di tokped seharga 660.000 ongkir 10.000 maka saat pembuatan petty cash itu dipisah yang mikrotik dengan kode Inventaris Perangkat 660.000 , Sedangkan ongkir masukkan ke Kode Ekspedisi
-- Jika ada Pembayaran Biaya Tenaga Ahli atau yang berhubungan dengan pajak misal sebesar 12.000.000, dipotongkan untuk PPh 21 sebesar 2.5% hingga 3% atau 300.000. Yang diinput di **Input Petty Cash**  sebesar 11.700.000 dengan kode Biaya Tenaga Ahli. Sedangkan 300.000 diinput di **Hutang Pajak** untuk debet (**Biaya Tenaga Ahli**) dan kreditnya (**Hutang PPh 21**) 
+- Jika ada Pembayaran Biaya Tenaga Ahli atau yang berhubungan dengan pajak misal sebesar 12.000.000, dipotongkan untuk PPh 21 sebesar 2.5% hingga 3% atau 300.000. Yang diinput di **Input Petty Cash**  sebesar 11.700.000 dengan kode Biaya Tenaga Ahli. Sedangkan 300.000 diinput di [**Hutang Pajak**](#33-hutang-pajak) untuk debet (**Biaya Tenaga Ahli**) dan kreditnya (**Hutang PPh 21**) 
 
 ## 3.1 Input Petty Cash
 
@@ -253,7 +253,7 @@ Jurnal yang terbuat dari Petty Cash tersebut
 
 ## 3.3 Hutang Pajak
 
-Seperti yang dijelaskan pada contoh kasus diatas pada **3 Petty Cash** . Input Hutang Dagang Pajak Petty Cash digunakan untuk potongan PPh. 
+Seperti yang dijelaskan pada contoh kasus [Petty Cash](#3-petty-cash) di atas . Input Hutang Dagang Pajak Petty Cash digunakan untuk potongan PPh. 
 
 Database yang digunakan : **glj, glj_item**
 
@@ -279,7 +279,9 @@ Database yang digunakan : **pcash_item**
 
 ### 3.4.3 Cetak Petty Cash
 
-Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi baik penambahan / pengurangan item. maka dapat klik **Import to Petty Cash** ![](https://github.com/rivaldoismir/Dokumentasi/blob/main/Admin/img/PettyCash-Import.png)
+Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi baik penambahan / pengurangan item. maka dapat klik **Import to Petty Cash** sehingga program automatis menyalin item pada rekap yang dipilih ke **Input Petty Cash** selanjutnya Petty Cash yang dipilih dihapus (fungsinya agar **No BKK** dapat digunakan lagi).
+
+![](/img/PettyCash-Import.png)
 
 
 
