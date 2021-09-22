@@ -18,7 +18,7 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master :arrow_right: Clie
    1. Client Bulanan (Untuk client yang ditagih secara bulanan)
    2. Client Onetime (Untuk client yang ditagih secara onetime)
    3. Client Titipan (Client Titipan berguna untuk Ticketting Helpdesk)
-   4. BTS (Digunakan untuk menambahkan)
+   4. BTS (Digunakan untuk Ticketting Helpdesk)
    
 5. Alamat Lengkap : diisi alamat client
 
@@ -28,11 +28,11 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master :arrow_right: Clie
 
 8. Data Admin (Marketting in charge) : diisi nama marketting
 
-9. Data Admin (Tanggal MOU) : diisi tanggal MOU
+9. Data Admin (Tanggal MOU) : diisi tanggal MOU untuk client baru maka Tanggal MOU dan Tanggal Berlangganan sama
 
 10. Data Admin (Waktu Kontrak) : diisi waktu kontrak dalam hitungan bulan
 
-11. Data Lainnya (Alamat Pengiriman) : diisi jika alamat pengiriman pada invoice beda dengan alamat lengkap. untuk formatnya **Nama/Kantor Penerima#Alamat Pengiriman**. 
+11. Data Lainnya (Alamat Pengiriman) : diisi jika alamat pengiriman pada invoice beda dengan alamat lengkap. untuk formatnya **NamaClient#Alamat Pengiriman**.
 
     
 
@@ -40,7 +40,7 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master :arrow_right: Clie
 
 Untuk mengedit **Data Client** bisa masuk ke **Data Master :arrow_right: Client :pencil:Edit Client  **. Data tambahan yang di edit yaitu :
 
-1.  No. Urut Invoice Auto : diisi angak lebih dari 0, sesuaikan dengan urutan Invoice Auto yang akan dicetak boleh, angka boleh sama.
+1.  No. Urut Invoice Auto : diisi angka lebih dari 0, sesuaikan dengan urutan Invoice Auto yang akan dicetak boleh, angka boleh sama.
 
 2. Data Detail Layanan : Diinput untuk client dengan keterangan **Client Bulanan** . 
 
@@ -91,6 +91,8 @@ Invoice Baru bisa digunakan untuk Penjualan Onetime maupun Bulanan jika tidak da
 
 **Jurnal Yang terbentuk dari Invoice Auto dan Invoice Baru** :
 
+Jenis Jurnal yang dipakai  **INV**
+
 | AKUN           |      DEBET |     KREDIT |
 | -------------- | ---------: | ---------: |
 | PIUTANG DAGANG | 11.010.000 |            |
@@ -106,14 +108,14 @@ Digunakan untuk melunasi invoice client ketika client sudah membayar invoice ter
 
 **Berikut Jurnal Jenis -  Jenis Pembayaran Invoice :**
 
+Jenis Jurnal yang dipakai  **BIN**
+
 ### 2.3.1 Pembayaran Full
 
 | AKUN           |      DEBET |     KREDIT |
 | -------------- | ---------: | ---------: |
 | BANK           | 11.010.000 |            |
 | PIUTANG DAGANG |            | 11.010.000 |
-
-
 
 ### 2.3.2 Pembayaran dengan Potongan Meterai
 
@@ -122,8 +124,6 @@ Digunakan untuk melunasi invoice client ketika client sudah membayar invoice ter
 | BANK           | 11.000.000 |            |
 | BIAYA LAIN2    |     10.000 |            |
 | PIUTANG DAGANG |            | 11.010.000 |
-
-
 
 ### 2.3.3 Pembayaran dengan PPh 23
 
@@ -135,8 +135,6 @@ Jika PPh 23 tidak sesuai dapat menggunakan Custom Nominal PPh dan tetap ceklist 
 | UM. PPh Pasal 23 |    200.000 |            |
 | PIUTANG DAGANG   |            | 11.010.000 |
 
-
-
 ### 2.3.4 Pembayaran dengan biaya lain-lain maupun biaya tranfer
 
 | AKUN           |      DEBET |     KREDIT |
@@ -144,8 +142,6 @@ Jika PPh 23 tidak sesuai dapat menggunakan Custom Nominal PPh dan tetap ceklist 
 | BANK           | 11.005.000 |            |
 | BIAYA LAIN2    |      5.000 |            |
 | PIUTANG DAGANG |            | 11.010.000 |
-
-
 
 ### 2.3.5 Pembayaran dengan Diskon Penjualan
 
@@ -155,8 +151,6 @@ Jika PPh 23 tidak sesuai dapat menggunakan Custom Nominal PPh dan tetap ceklist 
 | DISKON PENJUALAN |  1.000.000 |            |
 | PIUTANG DAGANG   |            | 11.010.000 |
 
-
-
 ### 2.3.6 Pembayaran dengan PPh 4 Ayat 2
 
 | AKUN           |      DEBET |     KREDIT |
@@ -164,8 +158,6 @@ Jika PPh 23 tidak sesuai dapat menggunakan Custom Nominal PPh dan tetap ceklist 
 | BANK           | 10.010.000 |            |
 | UM. PPh Final  |  1.000.000 |            |
 | PIUTANG DAGANG |            | 11.010.000 |
-
-
 
 ### 2.3.7 Pembayaran dengan PPh 22
 
@@ -175,19 +167,17 @@ Jika PPh 23 tidak sesuai dapat menggunakan Custom Nominal PPh dan tetap ceklist 
 | UM. PPh Pasal 22 |    150.000 |            |
 | PIUTANG DAGANG   |            | 11.010.000 |
 
-
-
 ## 2.4 Laporan
 
-Laporan yang terbuat dari transaksi invoice maupun pembayaran invoice
+Lokasi : **Laporan :arrow_right: Penjualan  **
 
-Lokasi : **Laporan :arrow_right: Penjualan  ** 
+Laporan yang terbuat dari transaksi invoice maupun pembayaran invoice : 
 
 ### 2.4.1 Laporan Invoice
 
-Untuk mencetak laporan satuan menggunakan Laporan Invoice, sedangkan untuk Laporan Invoice Periode dapat mencetak laporan lebih dari satu dengan syarat per invoice 1 halaman.
+Untuk mencetak laporan 1 Invoice menggunakan **Laporan Invoice**, sedangkan untuk **Laporan Invoice Periode** dapat mencetak laporan lebih dari satu dengan syarat per invoice 1 halaman.
 
-Ambil dari database **invoice dan invoice_item** 
+Data diambil dari database **invoice dan invoice_item** 
 
 ### 2.4.2 Laporan Pembayaran Invoice
 
@@ -218,4 +208,76 @@ Berisi informasi Invoice Bulan yang difilter per Bulan yang dapat dicetak PDF ma
 Data diambil dari database **invoice dan client **
 
 
+
+# 3 PETTY CASH
+
+Ketentuan Input Petty Cash :
+
+- Jika ada pembelian Perangkat yang merupakan Jenis Inventaris misal beli **Mikrotik powerline PL 7411** di tokped seharga 660.000 ongkir 10.000 maka saat pembuatan petty cash itu dipisah yang mikrotik dengan kode Inventaris Perangkat 660.000 , Sedangkan ongkir masukkan ke Kode Ekspedisi
+- Jika ada Pembayaran Biaya Tenaga Ahli atau yang berhubungan dengan pajak misal sebesar 12.000.000, dipotongkan untuk PPh 21 sebesar 2.5% hingga 3% atau 300.000. Yang diinput di **Input Petty Cash ** sebesar 11.700.000 dengan kode Biaya Tenaga Ahli. Sedangkan 300.000 diinput di **Hutang Pajak** untuk debet (**Biaya Tenaga Ahli**) dan kreditnya (**Hutang PPh 21**) 
+
+## 3.1 Input Petty Cash
+
+Lokasi : **Petty Cash :arrow_right: Input ** 
+
+Digunakan admin untuk input petty cash data tersebut masuk ke Database (sebelum rekap transaksi) **tmp_pcash**. Setelah semua data dicek selanjutnya direkap transaksi untuk menjadikan sebuah laporan. 
+
+Data tersebut masuk ke Database : **saldo_pcash, pcash, pcash_item, glj, glj_item**
+
+Jenis Jurnal yang dipakai  **PET** , untuk pusat menggunakan **PET-PST**
+
+Jurnal yang terbuat dari Petty Cash tersebut
+
+| AKUN                |   DEBET |  KREDIT |
+| ------------------- | ------: | ------: |
+| Administrasi Kantor | 100.000 |         |
+| Bahan Bakar         |  15.000 |         |
+| KAS KECIL           |         | 115.000 |
+
+## 3.2 TopUp Petty Cash
+
+Lokasi : **Petty Cash :arrow_right:  Top-up** 
+
+Top Up Saldo Petty Cash sesuaikan TopUp bank. Pastikan Saldo Petty Cash Sesuai dengan Saldo Real. History TopUp yang ditampilkan 40 item.
+
+Database yang digunakan  : **bk_bank, saldo_pcash, glj, glj_item**  
+
+Jenis Jurnal yang dipakai  **TOP** , untuk pusat menggunakan **TOP-PST**
+
+Jurnal yang terbuat dari Petty Cash tersebut
+
+| AKUN       |   DEBET |  KREDIT |
+| ---------- | ------: | ------: |
+| Petty Cash | 100.000 |         |
+| Bank       |         | 100.000 |
+
+## 3.3 Hutang Pajak
+
+Seperti yang dijelaskan pada contoh kasus diatas pada **3 Petty Cash** . Input Hutang Dagang Pajak Petty Cash digunakan untuk potongan PPh. 
+
+Database yang digunakan : **glj, glj_item **
+
+Jenis jurnal yang digunakan : **PPH-PC**
+
+## 3.4 Laporan Petty Cash
+
+Lokasi : **Laporan :arrow_right: Petty Cash **
+
+Laporan yang terbentuk pada transakasi Petty Cash  :
+
+### 3.4.1 Mutasi Petty Cash 
+
+Yang ditampilkan mutasi Petty Cash debet dan kredit
+
+Data diambil dari Database : **saldo_pcash**
+
+### 3.4.2 Petty Cash
+
+Menampilkan Item dari Petty Cash yang dapat di Export Excel untuk laporan bulanan.
+
+Database yang digunakan : **pcash_item**
+
+### 3.4.3 Cetak Petty Cash
+
+Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
 
