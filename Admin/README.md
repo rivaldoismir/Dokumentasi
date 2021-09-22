@@ -44,7 +44,7 @@ Untuk mengedit **Data Client** bisa masuk ke **Data Master :arrow_right: Client 
 
 2. Data Detail Layanan : Diinput untuk client dengan keterangan **Client Bulanan** . 
 
-   ![](D:\Master_Kerja\Dokumentasi\img\Client-Layanan.png)
+   ![](img\Client-Layanan.png)
 
    1. Kategori Penjualan diisi sesuai ketentuan berikut ini :
       1.	BANDWIDTH : UNTUK TAGIHAN BANDWIDTH BULANAN
