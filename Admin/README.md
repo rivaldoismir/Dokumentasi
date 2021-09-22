@@ -199,7 +199,7 @@ Berisi Detail Layanan Invoice dan Pembayaran Invocie yang diambil dari database 
 
 Berisi informasi Saldo Akhir Client yang dapat ditentukan tanggal saldo akhirnya. Informasi juga dapat diexport ke Excel.
 
-Data Laporan diambil dari database **saldo_client dan client**
+Data Laporan diambil dari database **saldo_client** dan **client**
 
 ### 2.4.6 Laporan Invoice Monthly
 
@@ -279,11 +279,10 @@ Database yang digunakan : **pcash_item**
 
 ### 3.4.3 Cetak Petty Cash
 
-Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
+Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi baik penambahan / pengurangan item. maka dapat klik **Import to Petty Cash** ![](https://github.com/rivaldoismir/Dokumentasi/blob/main/Admin/img/PettyCash-Import.png)
 
 
 
 # 4 Pembeliaan
-
 
 
