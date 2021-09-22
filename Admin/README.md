@@ -6,7 +6,7 @@
 
 ## 1.1 Create Client
 
-Untuk menambahkan **Data Client** bisa masuk ke **Data Master :arrow_right: Client :computer_mouse: Add Data **. Data yang perlu dipersiapkan * : 
+Untuk menambahkan **Data Client** bisa masuk ke **Data Master** :arrow_right: **Client** :computer_mouse: **Add Data** . Data yang perlu dipersiapkan * : 
 
 1. Kode Client : diisi dengan Huruf Besar dan angka, dapat diisi 3 - 6 Karakter
 
@@ -38,13 +38,13 @@ Untuk menambahkan **Data Client** bisa masuk ke **Data Master :arrow_right: Clie
 
 ## 1.2 Edit Client
 
-Untuk mengedit **Data Client** bisa masuk ke **Data Master :arrow_right: Client :pencil:Edit Client  **. Data tambahan yang di edit yaitu :
+Untuk mengedit **Data Client** bisa masuk ke **Data Master** :arrow_right: **Client** :pencil:**Edit Client**  . Data tambahan yang di edit yaitu :
 
 1.  No. Urut Invoice Auto : diisi angka lebih dari 0, sesuaikan dengan urutan Invoice Auto yang akan dicetak boleh, angka boleh sama.
 
 2. Data Detail Layanan : Diinput untuk client dengan keterangan **Client Bulanan** . 
 
-   ![](https://github.com/rivaldoismir/Dokumentasi/blob/main/Admin/img/Client-Layanan.png)
+   ![](https://github.com/rivaldoismir/Dokumentasi/blob/main/Admin/img/Client-Layanan.png) 
 
    1. Kategori Penjualan diisi sesuai ketentuan berikut ini :
       1.	BANDWIDTH : UNTUK TAGIHAN BANDWIDTH BULANAN
@@ -69,9 +69,9 @@ Untuk mengedit **Data Client** bisa masuk ke **Data Master :arrow_right: Client 
 
 **Admin** bertanggung jawab membuat Invoice Bulanan maupun Onetime. 
 
-**Database yang digunakan invoice auto dan invoice baru :** ***invoice, invoice_item, glj, glj_item, saldo_client* **
+Database yang digunakan invoice auto dan invoice baru : **invoice, invoice_item, glj, glj_item, saldo_client**
 
-**Database yang digunakan Pembayaran Invoice :** ***tmp_bayar_invoice (temporary) , glj, glj_item, saldo_client, bk_bank, bayar_invoice, bayar_invoice_item* **
+Database yang digunakan Pembayaran Invoice : **tmp_bayar_invoice (temporary) , glj, glj_item, saldo_client, bk_bank, bayar_invoice, bayar_invoice_item**
 
 ## 2.1 Invoice Auto
 
@@ -85,7 +85,7 @@ Invoice Auto merupakan fitur baru dari Backoffice untuk mempercepat pembuatan in
 
 ## 2.2 Invoice Baru
 
-Lokasi dari Invoice Baru : **Transaksi :arrow_right: Penjualan :arrow_right: Invoice Baru :fast_forward: pilih Client  **
+Lokasi dari Invoice Baru : **Transaksi** :arrow_right: **Penjualan** :arrow_right: **Invoice Baru** :fast_forward: **pilih Client**  
 
 Invoice Baru bisa digunakan untuk Penjualan Onetime maupun Bulanan jika tidak dapat menggunakan Invoice Auto
 
@@ -102,7 +102,7 @@ Jenis Jurnal yang dipakai  **INV**
 
 ## 2.3 Pembayaran Invoice
 
-Lokasi dari Pembayaran Invoice : **Transaksi :arrow_right: Penjualan :arrow_right: Pembayaran Invoice :fast_forward: pilih Client ** 
+Lokasi dari Pembayaran Invoice : **Transaksi** :arrow_right: **Penjualan** :arrow_right: **Pembayaran Invoice** :fast_forward: **pilih Client**  
 
 Digunakan untuk melunasi invoice client ketika client sudah membayar invoice tersebut. Jika client hanya membayar sebagian maka pilih **Bayar Sebagian** dan isi nominal serta potongan jika ada.
 
@@ -169,7 +169,7 @@ Jika PPh 23 tidak sesuai dapat menggunakan Custom Nominal PPh dan tetap ceklist 
 
 ## 2.4 Laporan
 
-Lokasi : **Laporan :arrow_right: Penjualan  **
+Lokasi : **Laporan** :arrow_right: **Penjualan**  
 
 Laporan yang terbuat dari transaksi invoice maupun pembayaran invoice : 
 
@@ -205,7 +205,7 @@ Data Laporan diambil dari database **saldo_client dan client**
 
 Berisi informasi Invoice Bulan yang difilter per Bulan yang dapat dicetak PDF maupun export excel
 
-Data diambil dari database **invoice dan client **
+Data diambil dari database **invoice** dan **client** 
 
 
 
@@ -214,11 +214,11 @@ Data diambil dari database **invoice dan client **
 Ketentuan Input Petty Cash :
 
 - Jika ada pembelian Perangkat yang merupakan Jenis Inventaris misal beli **Mikrotik powerline PL 7411** di tokped seharga 660.000 ongkir 10.000 maka saat pembuatan petty cash itu dipisah yang mikrotik dengan kode Inventaris Perangkat 660.000 , Sedangkan ongkir masukkan ke Kode Ekspedisi
-- Jika ada Pembayaran Biaya Tenaga Ahli atau yang berhubungan dengan pajak misal sebesar 12.000.000, dipotongkan untuk PPh 21 sebesar 2.5% hingga 3% atau 300.000. Yang diinput di **Input Petty Cash ** sebesar 11.700.000 dengan kode Biaya Tenaga Ahli. Sedangkan 300.000 diinput di **Hutang Pajak** untuk debet (**Biaya Tenaga Ahli**) dan kreditnya (**Hutang PPh 21**) 
+- Jika ada Pembayaran Biaya Tenaga Ahli atau yang berhubungan dengan pajak misal sebesar 12.000.000, dipotongkan untuk PPh 21 sebesar 2.5% hingga 3% atau 300.000. Yang diinput di **Input Petty Cash**  sebesar 11.700.000 dengan kode Biaya Tenaga Ahli. Sedangkan 300.000 diinput di **Hutang Pajak** untuk debet (**Biaya Tenaga Ahli**) dan kreditnya (**Hutang PPh 21**) 
 
 ## 3.1 Input Petty Cash
 
-Lokasi : **Petty Cash :arrow_right: Input ** 
+Lokasi : **Petty Cash :arrow_right: Input** 
 
 Digunakan admin untuk input petty cash data tersebut masuk ke Database (sebelum rekap transaksi) **tmp_pcash**. Setelah semua data dicek selanjutnya direkap transaksi untuk menjadikan sebuah laporan. 
 
@@ -280,4 +280,8 @@ Database yang digunakan : **pcash_item**
 ### 3.4.3 Cetak Petty Cash
 
 Menampilkan Laporan Rekap Petty Cash. Selain itu khusus Petty Cash terakhir jika Petty Cash tersebut ada revisi maka dapat 
+
+
+
+# 4 Pembeliaan
 
