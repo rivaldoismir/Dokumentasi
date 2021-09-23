@@ -317,7 +317,7 @@ Untuk membuat transaksi Purchase Order.
 
 ## 4.2 Pembeliaan
 
-Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Purchase Order & Pembeliaan :computer_mouse: klik simbol :briefcase: **
+Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Purchase Order & Pembeliaan :computer_mouse: klik simbol :briefcase:**
 
 Untuk membuat transaksi Pembeliaan. Yang dipersiapkan untuk input pembeliaan:
 
@@ -325,6 +325,6 @@ Untuk membuat transaksi Pembeliaan. Yang dipersiapkan untuk input pembeliaan:
 2. Tanggal Invoice : Tanggal Tagihan Invoice
 3. Meterai : Input meterai jika ada. Jika Invoice Gabungan maka meterai ditagihkan untuk Cabang Jakarta.
 4. PPN : Jika Tagihan tanpa PPN maka input 0
-5. Tambahkan [Inputan Barang](#kategori-barang-:) : 
+5. Tambahkan [Input Barang](#kategori-barang-): 
    1. Pilih Barang yang ditagih
 
