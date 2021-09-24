@@ -409,7 +409,7 @@ Cara Input Pembayaran :
 
       Potongan pembeliaan biasanya dipakai ketika Datautama tidak bayar Meterai atau lainnya nominal dibawah 10.000 . Kasus lain ketika Tagihan Invoice 1.100.001,99 tetapi Datautama hanya membayar 1.100.000 , maka 1,99 rupiahnya masukan ke Potongan Pembeliaan. 
 
-      Sedangkan jika Tagihannya 1.099.999 tetapi Datautama membayar sebesar 1.100.000 maka yang diinput di Pembayaran Tagihan sebesar 1.099.999 sedangkan 1 Rupiahnya di Input ke **Input Transaksi Buku Bank** 
+      Sedangkan jika Tagihannya 1.099.999 tetapi Datautama membayar sebesar 1.100.000 maka yang diinput di Pembayaran Tagihan sebesar 1.099.999 sedangkan 1 Rupiahnya di Input ke [Input Transaksi Buku Bank](#52-input-transaksi-buku-bank) 
 
       Jurnal yang terbentuk
 
