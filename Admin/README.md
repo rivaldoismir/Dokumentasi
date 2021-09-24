@@ -513,7 +513,7 @@ Inventaris adalah barang yang tidak dipergunakan untuk dijual dan harganya diata
 
 Barang Inventaris baik pembelian melalui Bank Maupun Kas Kecil harus diinput di Fix Asset.
 
-## 6.1 Fix Asset
+## 6.1 Fix Asset Baru
 
-
+Tata cara input Fix Asset
 
