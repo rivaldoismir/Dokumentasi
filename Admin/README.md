@@ -327,7 +327,7 @@ hal dasar yang perlu diketahui:
 
 6. LTAT : Kategori Listrik, Air & Telpon Bulanan
 
-7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input  [Fix Asset Baru](#61-fix-asset)
+7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input  [Fix Asset Baru](#61-fix-asset-baru)
 
 8. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**)
 
@@ -511,9 +511,92 @@ Beberapa Kasus Transaksi :
 
 Inventaris adalah barang yang tidak dipergunakan untuk dijual dan harganya diatas 250.000 kecuali kabel. 
 
-Barang Inventaris baik pembelian melalui Bank Maupun Kas Kecil harus diinput di Fix Asset.
+Barang Inventaris baik pembelian melalui Bank Maupun Kas Kecil harus diinput di Fix Asset. Selain Perangkat inventaris juga termasuk Kendaraan.
 
 ## 6.1 Fix Asset Baru
 
-Tata cara input Fix Asset
+Lokasi di **Transaksi :arrow_right: Inventaris :arrow_right: Fix Asset Baru **
+
+Tata cara input Fix Asset , Perangkat diinput 1 persatu karena masing" Perangkat ada No Tagging masing.
+
+1. Kode Fix Asset : Untuk Format Kode Fix Asset diserahkan ke masing" cabang. Untuk Kode Fix Asset hanya boleh diisi dengan Huruf , angka dan simbol **-** . Maksimal input 20 Karakter. 
+2. Barang : Sesuaikan dengan barang
+3. Jenis Fix Asset : Jika Perangkat pilih Inventaris, Jika termasuk Kendaraan maka pilih Kendaraan
+4. Tanggal Pembeliaan :  Isi sesuai Tanggal Pembeliaan, jika Perangkat dibeli lewat Petty Cash maka tanggal diinput sesuai Tanggal Petty Cash.
+5. Nilai Pokok Pembeliaan : Nilai yang sudah dikurangi dengan PPN
+6. Tanggal Mulai Penyusutan : Tanggal diisi sebulan setelah pembeliaan, jika pembeliaan nya tanggal 31 Januari 2021 maka tanggal penyusutannya 28 Februari 2021.
+
+Database yang digunakan : **fix_asset , fa_stok**
+
+## 6.2 Laporan
+
+Lokasi di **Laporan :arrow_right: Inventaris**
+
+### 6.2.1 Fix Asset
+
+Berisi Data Fix Asset yang sudah dibuat. Data dapat di Export to Excel. Untuk Kode Fix Asset dapat diubah jika data belum melakukan 1 transaksi baik Transaksi In & Out Fix Asset (Technical Support) maupun Penyusutan (Finance).
+
+Data Laporan diambil dari database **fix_asset ** 
+
+### 6.2.2 Fix Asset Rusak / Jual
+
+Berisi Data dari (Technical Support) bahwa barang Rusak Maupun diJual.
+
+Data Laporan diambil dari database **fa_rusak dan fix_asset**
+
+### 6.2.3 Kartu Stok Fix Asset
+
+Berisi Data Fix Asset dengan format Kartu Stok. Saldo Awal mulai 2021.
+
+Data Laporan diambil dari database **i_barang , i_master_trans , i_detail_trans **
+
+### 6.2.4 Rekap Fix Asset
+
+Berisi Data Fix Asset dengan format Rekap Laporan PDF.
+
+Data Laporan diambil dari database **i_barang dan fa_stok **
+
+# 7 Persediaan
+
+Barang yang termasuk persediaan (**PR**) jika dibeli melalui Petty Cash maka wajib input untuk stok. Sedangkan persediaan dibeli melali Bank dan terdapat Tagihan Invoice nya maka automatis persediaan diinput oleh program.
+
+## 7.1 Input Persediaan dari Kas
+
+Lokasi di **Transaksi :arrow_right: Persediaan :arrow_right: Input Persediaan dari Kas **
+
+Database Temporary ketika **Isi Transaksi** belum di simpan : **i_tmp_trans**
+
+Database yang digunakan: **i_master_trans dan i_detail_trans** 
+
+Yang perlu dipersiapkan dalam input Pembeliaan PR dari Kas:
+
+1. No. BKK : Input nomor BKK (Petty Cash)
+2. Tanggal Pembeliaan : Input tanggal sesuai Tanggal BKK
+3. Isi Transaksi :
+   1. Barang : Pilih Barang , jika tidak ada hubungi **finance**
+   2. Jumlah : Tuliskan jumlahnya
+   3. Harga HPP : harga satuan
+4. Pastikan Barang sudah diinput semua. Jika ada yang terlewat maka pilihannya input ulang atau bisa menambahkan inputan baru dengan no Petty Cash diakhir ditambahkan karakter lain misal -2.
+
+## 7.2 Laporan
+
+Lokasi di **Laporan :arrow_right: Persediaan**
+
+### 7.2.1 Input Persediaan dari Kas
+
+Berisi Data Input Persediaan dari Kas yang sudah dibuat. 
+
+Database yang digunakan: **i_master_trans dan i_detail_trans**  ** 
+
+### 7.2.2 Kartu Stok Persediaan
+
+Berisi Data Persediaan dengan format Kartu Stok. Saldo Awal mulai 1 Mei 2020.
+
+Data Laporan diambil dari database **i_barang , i_stok ,  i_master_trans , i_detail_trans **
+
+### 7.2.3 Rekap Persediaan
+
+Berisi Data Persediaan dengan format Rekap Laporan PDF.
+
+Data Laporan diambil dari database **i_barang  dan  i_stok **
 
