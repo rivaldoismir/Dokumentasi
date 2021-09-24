@@ -6,7 +6,7 @@
 
 ## 1.1 Create Client
 
-Untuk menambahkan **Data Client** bisa masuk ke **Data Master** :arrow_right: **Client** :computer_mouse: **Add Data** . Data yang perlu dipersiapkan * : 
+Untuk menambahkan **Data Client** bisa masuk ke **Data Master** :arrow_right: **Client** :computer_mouse: **Add Data** . Data yang perlu dipersiapkan  : 
 
 1. Kode Client : diisi dengan Huruf Besar dan angka, dapat diisi 3 - 6 Karakter
 
@@ -114,7 +114,7 @@ Digunakan untuk melunasi invoice client ketika client sudah membayar invoice ter
 
 ​	Untuk Pembayaran tolong sesuaikan dengan nominal pembayaran real di Bank, misal pembayaran dibank sebesar 11.010.000 maka hasil akhir pembayaran juga harus sesuai seperti gambar dibawah ini
 
-![](D:\Master_Kerja\Dokumentasi\Admin\img\Pembayran_client.png)
+![](img/Pembayran_client.png)
 
 ------
 
@@ -343,7 +343,7 @@ Untuk membuat transaksi Purchase Order.
 
 Database Temporary ketika **Isi Transaksi** belum di simpan : **tmp_poitem**
 
-Database yang digunakan: **po dan po_item ** 
+Database yang digunakan: **po dan po_item** 
 
 ## 4.2 Pembeliaan
 
