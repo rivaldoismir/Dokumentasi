@@ -487,7 +487,7 @@ Data Laporan diambil dari database **glj_item**
 
 Pilih Bank terlebih dahulu 
 
-![](img\input_bank.png)
+![](img/input_bank.png)
 
 Beberapa Kasus Transaksi :
 
@@ -515,7 +515,7 @@ Barang Inventaris baik pembelian melalui Bank Maupun Kas Kecil harus diinput di 
 
 ## 6.1 Fix Asset Baru
 
-Lokasi di **Transaksi :arrow_right: Inventaris :arrow_right: Fix Asset Baru **
+Lokasi di **Transaksi :arrow_right: Inventaris :arrow_right: Fix Asset Baru**
 
 Tata cara input Fix Asset , Perangkat diinput 1 persatu karena masing" Perangkat ada No Tagging masing.
 
@@ -536,7 +536,7 @@ Lokasi di **Laporan :arrow_right: Inventaris**
 
 Berisi Data Fix Asset yang sudah dibuat. Data dapat di Export to Excel. Untuk Kode Fix Asset dapat diubah jika data belum melakukan 1 transaksi baik Transaksi In & Out Fix Asset (Technical Support) maupun Penyusutan (Finance).
 
-Data Laporan diambil dari database **fix_asset ** 
+Data Laporan diambil dari database **fix_asset** 
 
 ### 6.2.2 Fix Asset Rusak / Jual
 
@@ -548,13 +548,13 @@ Data Laporan diambil dari database **fa_rusak dan fix_asset**
 
 Berisi Data Fix Asset dengan format Kartu Stok. Saldo Awal mulai 2021.
 
-Data Laporan diambil dari database **i_barang , i_master_trans , i_detail_trans **
+Data Laporan diambil dari database **i_barang , i_master_trans , i_detail_trans**
 
 ### 6.2.4 Rekap Fix Asset
 
 Berisi Data Fix Asset dengan format Rekap Laporan PDF.
 
-Data Laporan diambil dari database **i_barang dan fa_stok **
+Data Laporan diambil dari database **i_barang dan fa_stok**
 
 # 7 Persediaan
 
@@ -562,7 +562,7 @@ Barang yang termasuk persediaan (**PR**) jika dibeli melalui Petty Cash maka waj
 
 ## 7.1 Input Persediaan dari Kas
 
-Lokasi di **Transaksi :arrow_right: Persediaan :arrow_right: Input Persediaan dari Kas **
+Lokasi di **Transaksi :arrow_right: Persediaan :arrow_right: Input Persediaan dari Kas**
 
 Database Temporary ketika **Isi Transaksi** belum di simpan : **i_tmp_trans**
 
@@ -586,17 +586,17 @@ Lokasi di **Laporan :arrow_right: Persediaan**
 
 Berisi Data Input Persediaan dari Kas yang sudah dibuat. 
 
-Database yang digunakan: **i_master_trans dan i_detail_trans**  ** 
+Database yang digunakan: **i_master_trans dan i_detail_trans** 
 
 ### 7.2.2 Kartu Stok Persediaan
 
 Berisi Data Persediaan dengan format Kartu Stok. Saldo Awal mulai 1 Mei 2020.
 
-Data Laporan diambil dari database **i_barang , i_stok ,  i_master_trans , i_detail_trans **
+Data Laporan diambil dari database **i_barang , i_stok ,  i_master_trans , i_detail_trans**
 
 ### 7.2.3 Rekap Persediaan
 
 Berisi Data Persediaan dengan format Rekap Laporan PDF.
 
-Data Laporan diambil dari database **i_barang  dan  i_stok **
+Data Laporan diambil dari database **i_barang  dan  i_stok**
 
