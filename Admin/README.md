@@ -319,21 +319,23 @@ hal dasar yang perlu diketahui:
 
 2. Akuntan & Konsultan : Kategori Supplier Jasa Akuntan & Konsultan
 
-3. Asuransi Cabang: Kategori Asuransi yang merupakan Amortisasi
+3. Asuransi Cabang: (contoh ASSMG untuk cabang Semarang) : Pembelian jenis Amortisasi (berjangka lebih dari 1 bulan). Contoh Asuransi Kendaraan selama 1 tahun , dll
 
-4. Sewa Cabang: Kategori Sewa yang merupakan Amortisasi
+4. Sewa Cabang: (contoh SWSMG untuk cabang Semarang) : Pembelian jenis Amortisasi (berjangka lebih dari 1 bulan). Contoh Sewa Gedung selama 1 tahun , Sewa Rak selama 3 Bulan, dll
 
-5. HPPJ : Kategori HPP khusus Jasa
+5. HPPJ : kategori proyek dan teknisi jenis jasa yang dibayar Client. Contoh jasa pasang CCTV , jasa instalasi, dll
 
-6. LTAT : Kategori Listrik, Air & Telpon Bulanan
+6. PRYKJ / Jasa – Proyek dan Teknisi : Merupakan kategori proyek dan teknisi jenis jasa yang dibayar DU. Contoh jasa pasang CCTV , jasa instalasi, dll
 
-7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input  [Fix Asset Baru](#61-fix-asset-baru)
+7. LTAT : Kategori Listrik, Air & Telpon Bulanan
 
-8. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**)
+8. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input  [Fix Asset Baru](#61-fix-asset-baru)
+
+9. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**)
 
    *Jika barang belum tersedia di list dapat request ke **Finance**
 
-9. Barang langsung kode barangnya : Kategori Barang yang akan dijual kembali ke Client
+10. Barang langsung kode barangnya : Kategori Barang yang akan dijual kembali ke Client
 
 ## 4.1 Purchase Order
 
