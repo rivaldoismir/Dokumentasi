@@ -89,6 +89,8 @@ Lokasi dari Invoice Baru : **Transaksi** :arrow_right: **Penjualan** :arrow_righ
 
 Invoice Baru bisa digunakan untuk Penjualan Onetime maupun Bulanan jika tidak dapat menggunakan Invoice Auto
 
+------
+
 **Jurnal Yang terbentuk dari Invoice Auto dan Invoice Baru** :
 
 Jenis Jurnal yang dipakai  **INV**
@@ -105,6 +107,16 @@ Jenis Jurnal yang dipakai  **INV**
 Lokasi dari Pembayaran Invoice : **Transaksi** :arrow_right: **Penjualan** :arrow_right: **Pembayaran Invoice** :fast_forward: **pilih Client**  
 
 Digunakan untuk melunasi invoice client ketika client sudah membayar invoice tersebut. Jika client hanya membayar sebagian maka pilih **Bayar Sebagian** dan isi nominal serta potongan jika ada.
+
+*Kondisi Khusus misal Client PT. ABC double bayar di bulan Agustus untuk Invoice Agustus. Client minta Kelebihan bayar digunakan untuk Pembayaran Invoice September. Saat membayar Invoice September pilih Bank dengan nama **Uang Muka Penjualan** tanggal disesuaikan dengan Invoice September.
+
+###### *Perhatian !!!* 
+
+​	Untuk Pembayaran tolong sesuaikan dengan nominal pembayaran real di Bank, misal pembayaran dibank sebesar 11.010.000 maka hasil akhir pembayaran juga harus sesuai seperti gambar dibawah ini
+
+![](D:\Master_Kerja\Dokumentasi\Admin\img\Pembayran_client.png)
+
+------
 
 **Berikut Jurnal Jenis -  Jenis Pembayaran Invoice :**
 
@@ -222,11 +234,13 @@ Lokasi : **Petty Cash :arrow_right: Input**
 
 Digunakan admin untuk input petty cash data tersebut masuk ke Database (sebelum rekap transaksi) **tmp_pcash**. Setelah semua data dicek selanjutnya direkap transaksi untuk menjadikan sebuah laporan. 
 
+------
+
 Data tersebut masuk ke Database : **saldo_pcash, pcash, pcash_item, glj, glj_item**
 
 Jenis Jurnal yang dipakai  **PET** , untuk pusat menggunakan **PET-PST**
 
-Jurnal yang terbuat dari Petty Cash tersebut
+Jurnal yang terbentuk dari Petty Cash tersebut
 
 | AKUN                |   DEBET |  KREDIT |
 | ------------------- | ------: | ------: |
@@ -240,11 +254,13 @@ Lokasi : **Petty Cash :arrow_right:  Top-up**
 
 Top Up Saldo Petty Cash sesuaikan TopUp bank. Pastikan Saldo Petty Cash Sesuai dengan Saldo Real. History TopUp yang ditampilkan 40 item.
 
+------
+
 Database yang digunakan  : **bk_bank, saldo_pcash, glj, glj_item**  
 
 Jenis Jurnal yang dipakai  **TOP** , untuk pusat menggunakan **TOP-PST**
 
-Jurnal yang terbuat dari Petty Cash tersebut
+Jurnal yang terbentuk dari Petty Cash tersebut
 
 | AKUN       |   DEBET |  KREDIT |
 | ---------- | ------: | ------: |
@@ -305,8 +321,8 @@ hal dasar yang perlu diketahui:
 4. Sewa Cabang: Kategori Sewa yang merupakan Amortisasi
 5. HPPJ : Kategori HPP khusus Jasa
 6. LTAT : Kategori Listrik, Air & Telpon Bulanan
-7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS**
-8. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN**
+7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input **Fix Asset Baru**
+8. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**)
 9. Barang langsung kode barangnnya : Kategori Barang yang akan dijual kembali ke Client
 
 ## 4.1 Purchase Order
@@ -315,16 +331,147 @@ Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Purchase Order & Pe
 
 Untuk membuat transaksi Purchase Order.
 
+Database Temporary ketika **Isi Transaksi** belum di simpan : **tmp_poitem**
+
+Database yang digunakan: **po dan po_item ** 
+
 ## 4.2 Pembeliaan
 
 Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Purchase Order & Pembeliaan :computer_mouse: klik simbol :briefcase:**
 
-Untuk membuat transaksi Pembeliaan. Yang dipersiapkan untuk input pembeliaan:
+Untuk menginput transaksi Pembeliaan. Yang dipersiapkan untuk input pembeliaan:
 
 1. No Invoice : sesuaikan dengan no invoice pada tagihan, jika Tagihan Gabungan maka no invoice tambahkan kode cabangnya misal no invoice INV00900SMG untuk cabang Semarang. Jika memang tagihan tidak ada no invoice maka dikosongin saja.
 2. Tanggal Invoice : Tanggal Tagihan Invoice
 3. Meterai : Input meterai jika ada. Jika Invoice Gabungan maka meterai ditagihkan untuk Cabang Jakarta.
 4. PPN : Jika Tagihan tanpa PPN maka input 0
-5. Tambahkan [Input Barang](#kategori-barang-): 
-   1. Pilih Barang yang ditagih
+5. Tambahkan Isi Transaksi: 
+   1. Pilih Barang :  informasi detail di [Kategori Barang](#kategori-barang-)
+   2. Jumlah : Isi jumlah barang
+   3. Harga : Harga Satuan
+6. Setelah isi transaksi sudah dikirim, Klik Simpan
+
+------
+
+Database Temporary ketika **Isi Transaksi** belum di simpan : **i_tmp_trans**
+
+Database yang digunakan: **i_master_trans , i_detail_trans ,  i_stok (jika termasuk barang stok) , glj , glj_item , saldo_supplier**
+
+Jenis Jurnal yang dipakai : **TAG**
+
+Jurnal yang terbentuk dari Pembeliaan misalnya pembeliaan Perangkat **Inventaris**
+
+| AKUN                       |     DEBET |    KREDIT |
+| -------------------------- | --------: | --------: |
+| Inventaris Perangkat *     | 6.000.000 |           |
+| Hutang PPN **jika ber-PPN* |   600.000 |           |
+| Meterai                    |    10.000 |           |
+| Hutang Dagang              |           | 6.610.000 |
+
+## 4.3 Pembayaran Tagihan
+
+Lokasi di **Transaksi :arrow_right: Pembeliaan :arrow_right: Pembayaran Tagihan :computer_mouse:   klik simbol :heavy_plus_sign:**
+
+Digunakan untuk melunasi Tagihan ketika Datautama sudah membayar tagihan tersebut. Jika Datautama hanya membayar sebagian maka pilih **Bayar Sebagian** dan isi nominal serta potongan jika ada.
+
+Cara Input Pembayaran :
+
+1. Input Tanggal Bayar , sesuaikan dengan Tanggal Pembayaran di bank.
+
+2. Bank : Pilih Bank sesuai pembayaran,  kondisi Khusus Pembayaran: 
+   1. Jika ada Tagihan Pembeliaan yang biasanya dibayar lewat bank dan sudah input  [Tagihan Pembeliaan](#42-pembeliaan) maka pilih Kas Kecil.
+   2. Jika Bulan Lalu Datautama double bayar, kelebihan bayarnya dijadikan **Uang Muka Pembeliaan** maka Bank yang dipilih **Uang Muka Pembeliaan**. Dan untuk tanggal disesuaikan dengan Tagihan Pembeliaan.
+   
+3. Pilih Invoice yang akan dibayar , beberapa jenis pembayaran :
+
+   1. Full Pembayaran tanpa potongan
+
+      Jurnal yang terbentuk
+
+      | AKUN          |     DEBET |    KREDIT |
+      | ------------- | --------: | --------: |
+      | Hutang Dagang | 1.100.000 |           |
+      | Bank          |           | 1.100.000 |
+
+   2. Pembayaran dengan PPh 
+
+      PPh yang tersedia (PPh 23, PPh 4, PPh 26) Pilih PPh yang akan dipakai , jika nominal tidak diisi maka automatis program yang menghitung nominal pph , dan jika hasil pph tidak sesuai maka dapat input secara manual.
+
+      Jurnal yang terbentuk
+
+      | AKUN          |     DEBET |    KREDIT |
+      | ------------- | --------: | --------: |
+      | Hutang Dagang | 1.100.000 |           |
+      | Bank          |           | 1.080.000 |
+      | Hutang PPh 23 |           |    20.000 |
+
+   3. Pembayaran disertai Potongan Pembeliaan
+
+      Potongan pembeliaan biasanya dipakai ketika Datautama tidak bayar Meterai atau lainnya nominal dibawah 10.000 . Kasus lain ketika Tagihan Invoice 1.100.001,99 tetapi Datautama hanya membayar 1.100.000 , maka 1,99 rupiahnya masukan ke Potongan Pembeliaan. 
+
+      Sedangkan jika Tagihannya 1.099.999 tetapi Datautama membayar sebesar 1.100.000 maka yang diinput di Pembayaran Tagihan sebesar 1.099.999 sedangkan 1 Rupiahnya di Input ke **Input Transaksi Buku Bank** 
+
+      Jurnal yang terbentuk
+
+      | AKUN                |     DEBET |    KREDIT |
+      | ------------------- | --------: | --------: |
+      | Hutang Dagang       | 1.099.999 |           |
+      | Bank                |           | 1.099.999 |
+      | Potongan Pembeliaan |           |         1 |
+
+4. Setelah itu klik Tambah, untuk menambahkan invoice yang akan dibayarkan
+
+5. Sesuaikan nominal akhir pembayaran tidak boleh ada selisih 0.01 karna dapat membuat saldo bank selisih.
+
+Jenis Jurnal yang dipakai : **BTG**
+
+Database Temporary ketika **Isi Transaksi** belum di simpan : **tmp_bayar_hutang**
+
+Database yang digunakan : **saldo_supplier , bk_bank , bayar_hutang , bayar_hutang_item , i_master_trans , glj , glj_item**
+
+## 4.4 Laporan
+
+Lokasi : **Laporan** :arrow_right: **Pembeliaan**  
+
+Laporan yang terbuat dari transaksi invoice maupun pembayaran invoice : 
+
+### 4.4.1 Purchase Order
+
+Berisi Laporan Purchase Order yang telah dibuat. Admin hanya dapat mengubah nominal barang , tanggal , ppn pada Laporan.
+
+Data diambil dari database **po dan po_item** 
+
+### 4.4.2 Laporan Pembeliaan
+
+Berisi Laporan yang telah dibuat. Admin hanya dapat mengedit nomor faktur. Jika terjadi kesalahan admin menginput ulang Pembeliaan. Dengan syarat Pembayaran dari Pembeliaan tersebut **sudah dihapus terlebih dahulu**
+
+Ambil dari database **i_master_trans dan supplierdu**
+
+### 4.4.3 Laporan Pembayaran Tagihan
+
+Berisi Laporan yang telah dibuat. Admin hanya dapat menghapus Data Pembayaran Tagihan.
+
+Data Laporan diambil dari database **saldo_supplier, bk_bank , bayar_hutang , bayar_hutang_item , glj , glj_item , i_master_trans**
+
+### 4.4.4 Laporan Hutang Dagang
+
+Berisi Tagihan dan Pembayaran yang diambil dari database **saldo_supplier dan bk_bank**. Saldo awal diambil dari Database **saldo_supplier** dengan keterangan  kolom **kode** = "sal_awal"
+
+### 4.4.5 Saldo Piutang Dagang
+
+Berisi informasi Saldo Akhir Supplier yang dapat ditentukan tanggal saldo akhirnya. Informasi juga dapat diexport ke Excel.
+
+Data Laporan diambil dari database **saldo_supplier** dan **supplierdu**
+
+# 5 Bank
+
+Lokasi : **Bank** 
+
+## 5.1 Cek Input Bank
+
+Berisi Detail Transaksi Bank yang berupa Data Excel. Digunakan untuk cek Nominal Bank Backoffice dengan Bank Excel.
+
+Data Laporan diambil dari database **glj_item** 
+
+## 5.2 Input Transaksi Buku Bank
 
