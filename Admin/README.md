@@ -316,14 +316,24 @@ hal dasar yang perlu diketahui:
 ##### Kategori Barang :
 
 1. Bandwidth : Kategori untuk barang berupa Layanan Internet, khusus badwidth satuan yang dipilih adalah **bundle**
+
 2. Akuntan & Konsultan : Kategori Supplier Jasa Akuntan & Konsultan
+
 3. Asuransi Cabang: Kategori Asuransi yang merupakan Amortisasi
+
 4. Sewa Cabang: Kategori Sewa yang merupakan Amortisasi
+
 5. HPPJ : Kategori HPP khusus Jasa
+
 6. LTAT : Kategori Listrik, Air & Telpon Bulanan
+
 7. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input **Fix Asset Baru**
+
 8. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**)
-9. Barang langsung kode barangnnya : Kategori Barang yang akan dijual kembali ke Client
+
+   *Jika barang belum tersedia di list dapat request ke **Finance**
+
+9. Barang langsung kode barangnya : Kategori Barang yang akan dijual kembali ke Client
 
 ## 4.1 Purchase Order
 
@@ -474,4 +484,36 @@ Berisi Detail Transaksi Bank yang berupa Data Excel. Digunakan untuk cek Nominal
 Data Laporan diambil dari database **glj_item** 
 
 ## 5.2 Input Transaksi Buku Bank
+
+Pilih Bank terlebih dahulu 
+
+![](img\input_bank.png)
+
+Beberapa Kasus Transaksi :
+
+1. Ketika Input Transaksi **Pembayaran Tagihan** , misal Tagihannya 1.099.999 tetapi Datautama membayar sebesar 1.100.000 maka yang diinput di Pembayaran Tagihan sebesar 1.099.999 sedangkan 1 Rupiahnya diinput dengan 
+   1. Kode : **Biaya Lain2** 
+   2. Keterangan : Sesuai Keterangan di Bank Excel
+   3. Jenis Kas : Kredit , karena Uang Keluar dari Bank
+   4. Nominal : 1
+2. Ketika Input Transaksi **Pembayaran Invoice** client ,  misal Nominal Invoice 1.000.000 tetapi Client membayar sebesar 1.000.100 maka 100 rupiah diinput disini *Jika nominal 10.000 atau dibawahnya masukkan sebagai **Pendapatan Lain2**
+   1. Kode : **Pendapatan Lain2**
+   2. Keterangan : Sesuai Keterangan di Bank Excel
+   3. Jenis Kas : Debet, Karena Uang Masuk Ke Bank
+   4. Nominal : 100
+3. Ketika Input Transaksi **Pembayaran Invoice** client, ternyata client membayar double bayar. Client setuju untuk pembayaran kedua diinput sebagai **Uang Muka Penjualan**. 
+   1. Kode : **Uang Muka Penjualan**
+   2. Keterangan : Sesuai Keterangan di Bank Excel
+   3. Jenis Kas : Debet, Karena Uang Masuk Ke Bank
+   4. Nominal : nominal tagihan
+
+# 6 Inventaris
+
+Inventaris adalah barang yang tidak dipergunakan untuk dijual dan harganya diatas 250.000 kecuali kabel. 
+
+Barang Inventaris baik pembelian melalui Bank Maupun Kas Kecil harus diinput di Fix Asset.
+
+## 6.1 Fix Asset
+
+
 
