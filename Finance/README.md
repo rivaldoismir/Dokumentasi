@@ -92,7 +92,7 @@ Lokasi : **Data Master :arrow_right: Master Cabang**
 
 Database yang digunakan : **master_cab**
 
-Berisi daftar cabang yang ada di Datautama, digunakan sebagai berikut :
+Berisi daftar cabang yang ada di Datautama. jika ingin menambahkan Cabang baru maka input juga Master GL , Glink, Master Gudang.  Cara input sebagai berikut :
 
 1. Mengelola Kode Cabang
 2. Nama Pimpinan yang digunakan untuk Cetak Invoice dan Purchase Order
@@ -133,7 +133,7 @@ Lokasi : **Data Master :arrow_right: Master G-Link **
 
 Database yang digunakan : **master_glink**
 
-Berisi daftar Link Transaksi Jurnal Backoofice. Finance dapat menambahkan , mengedit dan menghapus Data (Disarankan untuk tidak menghapus dan mengedit data)
+Berisi daftar Link Transaksi Jurnal Backoofice. Finance dapat menambahkan , mengedit dan menghapus Data (Disarankan untuk tidak menghapus dan mengedit data). Link akan berfungsi jika kode program juga diedit.
 
 ## 2.7 Master Kategori Account
 
@@ -173,16 +173,63 @@ Ketentuan input Barang :
 2. Nama Barang : Maksimal Input 30 karakter
 3. Satuan : Untuk Barang menggunakan **pcs** sedangkan kabel menggunakan satuan **box**.
 4. Kode Merk : pilih merk , jika merk tidak tersedia input merk terlebih dahulu di [Master Merk](#34-master-merk)
+5. Tambahan : Ceklist **PR** jika termasuk Persediaan dan Ceklist **IV** jika termasuk Inventaris
 
 ## 3.2 Master Gudang
 
 Lokasi : **Data Inventory & Inventaris :arrow_right: Master Gudang**
 
+Database yang digunakan : **i_master_gudang**
+
+Gudang ditambahkan jika ada Cabang baru atau gudang baru.
+
 ## 3.3 Master Jenis Barang
 
 Lokasi : **Data Inventory & Inventaris :arrow_right: Master Jenis Barang**
 
+Database yang digunakan : **i_jenis_barang**
+
+Jenis Barang sudah paten tidak usah diedit , karena dapat mempengaruhi Jurnal Keuangan.
+
 ## 3.4 Master Merk
 
 Lokasi : **Data Inventory & Inventaris :arrow_right: Master Merk**
+
+Database yang digunakan : **i_merk**
+
+Finance dapat menambakan merk apabila merk belum tersedia.
+
+
+
+# 4 Transaksi Jurnal Accounting
+
+## 4.1 GL Jurnal
+
+Lokasi : **Transaksi Jurnal Accounting :arrow_right: GL Jurnal**
+
+Database yang digunakan : **glj , glj_item**
+
+Digunakan untuk input Jurnal Manual yang tidak terdapat di Modul. Jurnal yang diinput secara manual yaitu **Amortisasi**.
+
+Jenis Jurnal : **AMOR**
+
+
+
+## 4.2 GL Jurnal (ADM)
+
+Lokasi : **Transaksi Jurnal Accounting :arrow_right: GL Jurnal (ADM)**
+
+Database yang digunakan : **glj , glj_item**
+
+## 4.3 Input Buku Bank
+
+Lokasi : **Transaksi Jurnal Accounting :arrow_right: Input Buku Bank**
+
+Database yang digunakan : **bk_bank , glj, glj_item**
+
+## 4.4 Pembeliaan Internal
+
+Lokasi : **Transaksi Jurnal Accounting :arrow_right: Pembeliaan Internal**
+
+Database yang digunakan : **bj_internal, glj , glj_item**
 
