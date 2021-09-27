@@ -172,7 +172,7 @@ Ketentuan input Barang :
 1. Kode Barang : Maksimal Input 16 karakter. Kode barang harus unik dan menyerupai nama barang. Diperbolehkan menggunakan Karkater **huruf, angka , simbol (-)** saja.
 2. Nama Barang : Maksimal Input 30 karakter
 3. Satuan : Untuk Barang menggunakan **pcs** sedangkan kabel menggunakan satuan **box**.
-4. Kode Merk : pilih merk , jika merk tidak tersedia input merk terlebih dahulu di Master Merk
+4. Kode Merk : pilih merk , jika merk tidak tersedia input merk terlebih dahulu di [Master Merk](#34-master-merk)
 
 ## 3.2 Master Gudang
 
