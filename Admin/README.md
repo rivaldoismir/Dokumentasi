@@ -315,27 +315,27 @@ hal dasar yang perlu diketahui:
 
 ##### Kategori Barang :
 
-1. Bandwidth : Kategori untuk barang berupa Layanan Internet, khusus badwidth satuan yang dipilih adalah **bundle**
+1. Bandwidth : Kategori untuk barang berupa Layanan Internet, khusus badwidth satuan yang dipilih adalah **bundle** . Kode Account yang terbentuk (**HPP**)
 
-2. Akuntan & Konsultan : Kategori Supplier Jasa Akuntan & Konsultan
+2. Akuntan & Konsultan : Kategori Supplier Jasa Akuntan & Konsultan. Kode Account yang terbentuk (**Akuntan & Konsultan**)
 
-3. Asuransi Cabang: (contoh ASSMG untuk cabang Semarang) : Pembelian jenis Amortisasi (berjangka lebih dari 1 bulan). Contoh Asuransi Kendaraan selama 1 tahun , dll
+3. Asuransi Cabang: (contoh ASSMG untuk cabang Semarang) : Pembelian jenis Amortisasi (berjangka lebih dari 1 bulan). Contoh Asuransi Kendaraan selama 1 tahun , dll . Kode Account yang terbentuk (**Asuransi Dibayar Dimuka**)
 
-4. Sewa Cabang: (contoh SWSMG untuk cabang Semarang) : Pembelian jenis Amortisasi (berjangka lebih dari 1 bulan). Contoh Sewa Gedung selama 1 tahun , Sewa Rak selama 3 Bulan, dll
+4. Sewa Cabang: (contoh SWSMG untuk cabang Semarang) : Pembelian jenis Amortisasi (berjangka lebih dari 1 bulan). Contoh Sewa Gedung selama 1 tahun , Sewa Rak selama 3 Bulan, dll. Kode Account yang terbentuk (**Sewa Dibayar Dimuka**)
 
-5. HPPJ : kategori proyek dan teknisi jenis jasa yang dibayar Client. Contoh jasa pasang CCTV , jasa instalasi, dll
+5. HPPJ : kategori proyek dan teknisi jenis jasa yang dibayar Client. Contoh jasa pasang CCTV , jasa instalasi, dll. Kode Account yang terbentuk (**HPP**)
 
-6. PRYKJ / Jasa – Proyek dan Teknisi : Merupakan kategori proyek dan teknisi jenis jasa yang dibayar DU. Contoh jasa pasang CCTV , jasa instalasi, dll
+6. PRYKJ / Jasa – Proyek dan Teknisi : Merupakan kategori proyek dan teknisi jenis jasa yang dibayar DU. Contoh jasa pasang CCTV , jasa instalasi, dll. Kode Account yang terbentuk  **Operasional Peralatan**
 
-7. LTAT : Kategori Listrik, Air & Telpon Bulanan
+7. LTAT : Kategori Listrik, Air & Telpon Bulanan. Kode Account yang terbentuk (**Listrik Air & Telpon**)
 
-8. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input  [Fix Asset Baru](#61-fix-asset-baru)
+8. Barang awalan IV-1 (IV-1 , 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **INVENTARIS** . Barang yang termasuk Inventaris nanti juga diinput **Fix Asset Baru**. Barang yang dibeli pembayarannya lewat Petty Cash juga Input  [Fix Asset Baru](#61-fix-asset-baru). Kode Account yang terbentuk (**Inventaris Perangkat**).
 
-9. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**)
+9. Barang awalan PR-1 (PR-1, 1 untuk urutan cabang Jakarta) : Kategori Barang yang merupakan **PERSEDIAAN** (Termasuk barang **Stok**). Kode Account yang terbentuk (**Operasional Peralatan**)
 
    *Jika barang belum tersedia di list dapat request ke **Finance**
 
-10. Barang langsung kode barangnya : Kategori Barang yang akan dijual kembali ke Client
+10. Barang baik Persediaan Maupun Inventaris namun dijual : Kategori Barang yang akan dijual kembali ke Client. Kode Account yang terbentuk (**HPP**)
 
 ## 4.1 Purchase Order
 
