@@ -92,7 +92,7 @@ Lokasi : **Data Master :arrow_right: Master Cabang**
 
 Database yang digunakan : **master_cab**
 
-Berisi daftar cabang yang ada di Datautama. jika ingin menambahkan Cabang baru maka input juga Master GL , Glink, Master Gudang.  Cara input sebagai berikut :
+Berisi daftar cabang yang ada di Datautama. **jika ingin menambahkan Cabang baru maka input juga Master GL , Glink, Master Gudang**.  Cara input sebagai berikut :
 
 1. Mengelola Kode Cabang
 2. Nama Pimpinan yang digunakan untuk Cetak Invoice dan Purchase Order
