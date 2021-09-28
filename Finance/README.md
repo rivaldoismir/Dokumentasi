@@ -213,7 +213,27 @@ Digunakan untuk input Jurnal Manual yang tidak terdapat di Modul. Jurnal yang di
 
 Jenis Jurnal : **AMOR**
 
+Nomor Jurnal : format jenis jurnal 21.07.AMOR04 (Tahun.Bulan.NoUrutCabang)
 
+Data yang dibutuhkan nilai amortisasi bulanan misalkan Cabang Solo Bulan Juli 2021 : 
+
+1. Sewa Gedung : 20.833.333
+2. Sewa BTS : 1.240.741
+3. Asuransi Kendaraan (Kode Account menggunakan **Premi Asuransi**: 146.535
+4. Sewa IP : 641.667
+5. Sumbangan & Iuran : 125.000
+
+Jurnal yang terbentuk : 
+
+| Akun                    |      Debet |     Kredit |
+| ----------------------- | ---------: | ---------: |
+| Sewa Gedung             | 20.833.333 |            |
+| Sewa BTS                |  1.240.741 |            |
+| Premi Asuransi          |    146.535 |            |
+| Asuransi Dibayar Dimuka |            |    146.535 |
+| Sewa IP                 |    641.667 |            |
+| Sumbangan & Iuran       |    125.000 |            |
+| Sewa Dibayar Dimuka     |            | 22.840.741 |
 
 ## 4.2 GL Jurnal (ADM)
 
@@ -221,15 +241,60 @@ Lokasi : **Transaksi Jurnal Accounting :arrow_right: GL Jurnal (ADM)**
 
 Database yang digunakan : **glj , glj_item**
 
+Berisi semua jurnal yang telah diinput baik jurnal manual maupun jurnal automatis by program.
+
 ## 4.3 Input Buku Bank
 
 Lokasi : **Transaksi Jurnal Accounting :arrow_right: Input Buku Bank**
 
 Database yang digunakan : **bk_bank , glj, glj_item**
 
+Program yang digunakan untuk Mengelola inputan transaksi buku bank.
+
+Jurnal yang terbentuk, contoh jika Bank debet
+
+| Akun                 | Debet | Kredit |
+| -------------------- | ----- | ------ |
+| Bank                 | 6000  |        |
+| Pendapatan Lain Lain |       | 6000   |
+
 ## 4.4 Pembeliaan Internal
 
 Lokasi : **Transaksi Jurnal Accounting :arrow_right: Pembeliaan Internal**
 
 Database yang digunakan : **bj_internal, glj , glj_item**
+
+Program untuk menginput Pembeliaan Internal. Berikut cara menginput Pembeliaan Internal :
+
+1. Tanggal : Input kan berdasarkan tanggal akhir dibulan tersebut
+2. No Jurnal  : 21.07.ITRL04.19 (Tahun.Bulan.NoUrutCabang.NoUrutPadaCabangTersebut). Untuk Lebih jelas dapat dilihat di File **Maste Input**
+3. Pembeliaan Cabang : diisi cabang yang akan membeli, ke cabang yang menjual.
+4. Nominal : Lihat Laporan Pembeliaan Internal.
+
+Jenis Jurnal yang digunakan : **ITRL**
+
+Jurnal yang terbentuk, misal pembeliaan Cabang Solo ke Cabang Jakarta
+
+| Akun                         |     Debit |    Kredit |
+| ---------------------------- | --------: | --------: |
+| Pembeliaan Internal (Solo)   | 2.318.182 |           |
+| Ayat Silang SLO (Solo)       |           | 2.318.182 |
+| Penjualan Internal (Jakarta) |           | 2.318.182 |
+| Ayat Silang JKT (Jakarta)    | 2.318.182 |           |
+
+
+
+# 5 Kas Pusat
+
+## 5.1 Input
+
+Lokasi : **Kas Pusat :arrow_right: Input**
+
+Database temporary : **tmp_pcash**
+
+Database yang digunakan : **pcash, pcash_item, glj , glj_item**
+
+Jenis Jurnal yang digunakan : **PET-PST** (Petty Cash Pusat)
+
+Tata Cara Input Petty Cash Pusat hampir sama dengan Petty Cash Cabang (Admin),  pembedanya hanyalah memilih cabang ketika input kode. **Jika ada cabang baru maka program petty cash (pcash_rekap) harus ditambahkan dengan cara manual** 
 
