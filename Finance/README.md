@@ -292,9 +292,262 @@ Lokasi : **Kas Pusat :arrow_right: Input**
 
 Database temporary : **tmp_pcash**
 
-Database yang digunakan : **pcash, pcash_item, glj , glj_item**
+Database yang digunakan : **saldo_pcash, pcash, pcash_item, glj , glj_item**
 
 Jenis Jurnal yang digunakan : **PET-PST** (Petty Cash Pusat)
 
-Tata Cara Input Petty Cash Pusat hampir sama dengan Petty Cash Cabang (Admin),  pembedanya hanyalah memilih cabang ketika input kode. **Jika ada cabang baru maka program petty cash (pcash_rekap) harus ditambahkan dengan cara manual** 
+Tata Cara Input Petty Cash Pusat hampir sama dengan Petty Cash Cabang (Admin),  pembedanya hanyalah memilih cabang ketika input kode.
 
+Jurnal yang terbentuk, misal Uang Makan Karyawan Pusat sebesar 300.000 dibagi 4 Cabang.
+
+| Akun                           |   Debit |  Kredit |
+| ------------------------------ | ------: | ------: |
+| Uang Makan & Lembur (Jakarta)  |  75.000 |         |
+| Uang Makan & Lembur (Surabaya) |  75.000 |         |
+| Uang Makan & Lembur (Semarang) |  75.000 |         |
+| Uang Makan & Lembur (Solo)     |  75.000 |         |
+| Kas Pusat (Semarang)           |         | 300.000 |
+| Ayat Silang (Jakarta)          |         |  75.000 |
+| Ayat Silang (Surabaya)         |         |  75.000 |
+| Ayat Silang (Solo)             |         |  75.000 |
+| Ayat Silang (Semarang)         | 225.000 |         |
+
+## 5.2 Top-up
+
+Lokasi : **Kas Pusat :arrow_right: Top-up**
+
+Database yang digunakan : **saldo_pcash, bk_bank, glj , glj_item**
+
+Jenis jurnal yang digunakan : **TOP-PST**
+
+Jurnal yang terbentuk, 
+
+| Akun            |   Debet |  Kredit |
+| --------------- | ------: | ------: |
+| Kas Kecil Pusat | 100.000 |         |
+| Bank            |         | 100.000 |
+
+## 5.3 Cetak Lap. Kas Pusat
+
+Lokasi : **Kas Pusat :arrow_right: Cetak Lap. Kas Pusat**
+
+Database yang digunakan : **pcash , pcash_item**
+
+Berisi Laporan Rekap Petty Cash Pusat ,finance hanya dapat menghapus dan melihat detail laporan.
+
+
+
+# 6 Laporan
+
+## 6.1 Transaksi GL Jurnal
+
+Lokasi : **Laporan :arrow_right: Transaksi GL Jurnal**
+
+Database yang digunakan : **glj_item dan glj_item@thn**
+
+File convert excel diambil dari **export/export_jurnal**
+
+File convert pdf diambil dari **tcpdf/cetak/lapcetakgl**
+
+Digunakan untuk menampilkan jurnal pada seluruh transaksi Backoffice dalam bentuk pdf maupun excel.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/exc_gljurnal.png)
+
+
+
+![](img/lap_gljurnal.png)
+
+## 6.2 Transaksi Buku Besar
+
+Lokasi : **Laporan :arrow_right: Transaksi Buku Besar**
+
+Database yang digunakan : **glj_item**
+
+File convert pdf diambil dari **tcpdf/cetak/lapcetakbkbesar**
+
+Digunakan untuk cetak pdf jurnal buku besar sesuai COA (Chart Of Account). 
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_bukubesar.png)
+
+## 6.3 Transaksi Buku Besar (Excel)
+
+Lokasi : **Laporan :arrow_right: Transaksi Buku Besar (Excel)**
+
+Database yang digunakan : **glj_item**
+
+File convert excel diambil dari **export/export_bkbesar**
+
+Digunakan untuk cetak excel jurnal buku besar sesuai COA (Chart Of Account). 
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/exc_bkbesar.png)
+
+## 6.4 Transaksi Buku Besar (Ayt)
+
+Lokasi : **Laporan :arrow_right: Transaksi Buku Besar**
+
+Database yang digunakan : **glj_item**
+
+File convert pdf diambil dari **tcpdf/cetak/lapcetakbkbesar1**
+
+Menampilkan jurnal Buku Besar Khusus Ayat Silang dalam bentuk pdf. 
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_bkbesar1.png)
+
+## 6.5 Transaksi Trial Balance
+
+Lokasi : **Laporan :arrow_right: Transaksi Trial Balance**
+
+Database yang digunakan : **master_gl**
+
+File convert pdf diambil dari **tcpdf/cetak/lapcetaktrialbalance**
+
+Digunakan untuk cetak pdf jurnal Trial Balance perbulan. sebelum menggunakan harap di update terlebih dahulu.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_trialbalance.png)
+
+## 6.6 Transaksi Trial Balance (Landscape)
+
+Lokasi : **Laporan :arrow_right: Transaksi Trial Balance (Landscape)**
+
+Database yang digunakan : **master_gl**
+
+File convert pdf diambil dari **tcpdf/cetak/lapcetaktrialbalance2**
+
+Digunakan untuk cetak pdf jurnal Trial Balance 1 Tahun. sebelum menggunakan harap di update gljurnal terlebih dahulu.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_trialbalance2.png)
+
+## 6.7 Laba Rugi Tahunan
+
+Lokasi : **Laporan :arrow_right: Laba Rugi Tahunan**
+
+Database yang digunakan : **master_gl**
+
+File convert pdf diambil dari **tcpdf/cetak/lap_lrthn**
+
+Menyajikan Laporan Laba Rugi 1 Tahun dalam bentuk pdf. Sebelum menggunakan harap di update gljurnal terlebih dahulu.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_lrthn.png)
+
+## 6.8 Neraca dan Laba Rugi
+
+Lokasi : **Laporan :arrow_right: Neraca dan Laba Rugi**
+
+Database yang digunakan : **master_gl dan glj_rekap**
+
+File convert pdf diambil dari **tcpdf/cetak/lap_neraca**
+
+Menyajikan Laporan Laba Rugi & Neraca perbulan dalam bentuk pdf. sebelum menggunakan harap di update gljurnal terlebih dahulu.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_lr.png)
+
+
+
+![](img/lap_neraca.png)
+
+## 6.9 Buku Bank
+
+Lokasi : **Laporan :arrow_right: Buku Bank**
+
+Database yang digunakan : **bk_bank**
+
+File convert excel diambil dari **export/export_bank**
+
+Digunakan untuk melihat daftar transaksi buku bank. Data transaksi dapat diekspor ke excel juga.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/exc_bukubank.png)
+
+## 6.10 Saldo
+
+Lokasi : **Laporan :arrow_right: Saldo**
+
+Database yang digunakan : **master_gl dan bk_bank**
+
+Digunakan untuk melihat saldo akhir yang ditentukan pertanggal. 
+
+## 6.11 PPH 23
+
+Lokasi : **Laporan :arrow_right: PPH 23**
+
+Database yang digunakan : **bayar_invoice**
+
+File convert pdf diambil dari **tcpdf/cetak/laporancetakpph23**
+
+Menyajikan laporan pph 23 dari pembayaran invoice client dalam bentuk pdf yang difilter berdasarkan perode tanggal.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_pph23.png)
+
+## 6.12 Invoice Monthly
+
+Lokasi : **Laporan :arrow_right: Invoice Monthly**
+
+Database yang digunakan : **invoice**
+
+File convert pdf diambil dari **tcpdf/cetak/invoice_monthly**
+
+Menyajikan laporan Invoice Monthly dalam bentuk pdf yang difilter berdasarkan bulan.
+
+Untuk bentuk laporannya seperti gambar dibawah ini :
+
+![](img/lap_invoice_monthly.png)
+
+## 6.13 Invoice
+
+Lokasi : **Laporan :arrow_right: Invoice**
+
+Database yang digunakan : **invoice dan invoice_item**
+
+Digunakan untuk melihat laporan invoice dan mengganti no faktur pada invoice. 
+
+
+
+# 7 Penyusutan
+
+## 7.1 Penyusutan
+
+Lokasi : **Penyusutan :arrow_right: Penyusutan**
+
+Database yang digunakan : **gl_system , fix_asset , glj_item , glj, tmp_sst**
+
+Digunakan untuk melakukan penyusutan inventaris. Persyaratan sebelum melakukan penyusutan, fix asset sudah terinput semua. Barang yang rusak atau jual maka status diubah terlebih dahulu. Langkah selanjutnya, Ubah bulan dan cabang penyusutan pada **ganti master** lalu klik ganti. Lalu klik susutkan pada **daftar transaksi penyusutan** klik Susutkan. Jika data yang tersusutkan sudah benar maka klik **Simpan** dan apabila data belum sesuai maka klik **Batal** . Untuk mengelola fix asset bisa masuk ke program fix asset
+
+Jurnal yang terbentuk dari penyusutan misal (Cabang Solo April 2021) : 
+
+| Akun                                |         Debet |        Kredit |
+| ----------------------------------- | ------------: | ------------: |
+| Penyusutan Inventaris Perangkat     | 15.627.499,91 |               |
+| Penyusutan Kendaraan                |  2.126.666,66 |               |
+| Ak. Penyusutan Inventaris Perangkat |               | 15.627.499,91 |
+| Ak. Penyusutan Kendaraan            |               |  2.126.666,66 |
+
+
+
+## 7.2 Fix Asset
+
+Lokasi : **Penyusutan :arrow_right: Fix Asset**
+
+Database yang digunakan : **gl_system , fix_asset , glj_item , glj, tmp_sst**
+
+## 7.3 Fix Asset Rusak / Jual
+
+## 7.4 Log Transaksi
