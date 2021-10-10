@@ -529,7 +529,7 @@ Lokasi : **Penyusutan :arrow_right: Penyusutan**
 
 Database yang digunakan : **gl_system , fix_asset , glj_item , glj, tmp_sst**
 
-Digunakan untuk melakukan penyusutan inventaris. Persyaratan sebelum melakukan penyusutan, fix asset sudah terinput semua. Barang yang rusak atau jual maka status diubah terlebih dahulu. Langkah selanjutnya, Ubah bulan dan cabang penyusutan pada **ganti master** lalu klik ganti. Lalu klik susutkan pada **daftar transaksi penyusutan** klik Susutkan. Jika data yang tersusutkan sudah benar maka klik **Simpan** dan apabila data belum sesuai maka klik **Batal** . Untuk mengelola fix asset bisa masuk ke program fix asset
+Digunakan untuk melakukan penyusutan inventaris. Persyaratan sebelum melakukan penyusutan, fix asset sudah terinput semua. Barang yang rusak atau jual maka status diubah terlebih dahulu. Langkah selanjutnya, Ubah bulan dan cabang penyusutan pada **ganti master** lalu klik ganti. Lalu klik susutkan pada **daftar transaksi penyusutan** klik Susutkan. Jika data yang tersusutkan sudah benar maka klik **Simpan** dan apabila data belum sesuai maka klik **Batal** . Untuk mengelola fix asset bisa masuk ke program [fix asset](#72-fix-asset)
 
 Jurnal yang terbentuk dari penyusutan misal (Cabang Solo April 2021) : 
 
@@ -540,14 +540,29 @@ Jurnal yang terbentuk dari penyusutan misal (Cabang Solo April 2021) :
 | Ak. Penyusutan Inventaris Perangkat |               | 15.627.499,91 |
 | Ak. Penyusutan Kendaraan            |               |  2.126.666,66 |
 
-
-
 ## 7.2 Fix Asset
 
 Lokasi : **Penyusutan :arrow_right: Fix Asset**
 
-Database yang digunakan : **gl_system , fix_asset , glj_item , glj, tmp_sst**
+Database yang digunakan : **fix_asset**
+
+File convert excel diambil dari **export/export_fa**
+
+Untuk mengelola fix asset baik mengeksport ke excel, menghapus, mengedit / memperbarui data fix asset.
 
 ## 7.3 Fix Asset Rusak / Jual
 
+Lokasi : **Penyusutan :arrow_right: Fix Asset Rusak / Jual**
+
+Database yang digunakan : **fa_rusak**
+
+Untuk menampilkan data fix asset yang berstatus rusak maupun jual dari transaksi In/Out Fix Asset. Yang digunakan sebagai tolak ukur pengubahan status pada Fix Asset
+
 ## 7.4 Log Transaksi
+
+Lokasi : **Penyusutan :arrow_right: Log Transaksi**
+
+Database yang digunakan : **log_pengerjaan**
+
+Untuk menampilkan log transaksi semua user di backoffice. Digunakan untuk monitoring aktifitas user di Backoffice
+
